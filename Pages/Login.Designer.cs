@@ -1,7 +1,7 @@
 ﻿
 namespace ProjetoProgramacaoVisual
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -87,8 +87,9 @@ namespace ProjetoProgramacaoVisual
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +100,7 @@ namespace ProjetoProgramacaoVisual
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login And Create Form";
             this.ResumeLayout(false);

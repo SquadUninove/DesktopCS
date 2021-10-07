@@ -15,7 +15,6 @@ C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\MySql.Data.xml
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.csproj.AssemblyReference.cache
-C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Form1.resources
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Properties.Resources.resources
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.csproj.GenerateResource.cache
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.csproj.CoreCompileInputs.cache
@@ -23,3 +22,4 @@ C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVi
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.exe
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.pdb
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Home.resources
+C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Login.resources

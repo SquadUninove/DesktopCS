@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoProgramacaoVisual
 {
-    public partial class Home : Form
+    public partial class Register : Form
     {
-        public Home()
+        public Register()
         {
             InitializeComponent();
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 frm1 = new Form1();
-            frm1.ShowDialog();
         }
     }
 }
