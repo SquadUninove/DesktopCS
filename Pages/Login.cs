@@ -32,12 +32,16 @@ namespace ProjetoProgramacaoVisual
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string user = txtUsername.Text;
-            string pass = txtPassword.Text;
+            string user = txtNomeUsuarioEntrar.Text;
+            string pass = txtSenhaEntrar.Text;
 
             if (IsLogin(user, pass))
             {
                 MessageBox.Show($"Bem vindo {user}!");
+                Home HomeForm = new Home();
+                HomeForm.ShowDialog();
+                this.Close();
+
             }
             else
             {
@@ -83,49 +87,8 @@ namespace ProjetoProgramacaoVisual
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string user = txtUsername.Text;
-            string pass = txtPassword.Text;
-
-            if(Register(user, pass))
-            {
-                MessageBox.Show($"Usuário {user} cadastrado");
-            }
-            else
-            {
-                MessageBox.Show($"Usuário não cadastrado");
-            }
-        }
-
-        public bool Register(string user, string pass)
-        {
-            string query = $"INSERT INTO users(id,username,password) VALUES('','{user}','{pass}');";
-
-            try
-            {
-                if (OpenConnection())
-                {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        return true;
-                    }
-                    catch(Exception ex)
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    conn.Close();
-                    return false;
-                }
-            }
-            catch(Exception ex)
-            {
-                conn.Clone();
-                return false;
-            }
+            Registrar RegisterForm = new Registrar();
+            RegisterForm.ShowDialog();
         }
 
         private bool OpenConnection()

@@ -23,3 +23,4 @@ C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVi
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.pdb
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Home.resources
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Login.resources
+C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Registrar.resources
