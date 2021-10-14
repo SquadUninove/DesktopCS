@@ -61,7 +61,7 @@ namespace ProjetoProgramacaoVisual
                         cmd.ExecuteNonQuery();
                         return true;
                     }
-                    catch (Exception ex)
+                    catch (Exception )
                     {
                         return false;
                     }
@@ -72,7 +72,7 @@ namespace ProjetoProgramacaoVisual
                     return false;
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 conn.Clone();
                 return false;

@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoProgramacaoVisual
+namespace ProjetoProgramacaoVisual.Pages
 {
-    public partial class Home : Form
+    public partial class frmCategorias : Form
     {
-        public Home()
+        public frmCategorias()
         {
             InitializeComponent();
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login frm1 = new Login();
-            frm1.ShowDialog();
         }
     }
 }
