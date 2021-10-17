@@ -7,24 +7,11 @@ namespace ProjetoProgramacaoVisual
     public partial class Login : Form
     {
         private MySqlConnection conn;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-        private string ssl;
 
         public Login()
         {
-            server = "localhost";
-            uid = "root";
-            password = "";
-            database = "tut";
-            ssl = "None";
-
-
             string connString;
-            connString = $"datasource={server};username={uid};password={password};database={database};SSL Mode={ssl};";
-
+            connString = $"datasource=localhost;username=root;password=;database=projetovisual;SSL Mode=None;";
             conn = new MySqlConnection(connString);
 
             InitializeComponent();
@@ -32,25 +19,25 @@ namespace ProjetoProgramacaoVisual
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string user = txtNomeUsuarioEntrar.Text;
-            string pass = txtSenhaEntrar.Text;
+            string nome = txtNomeUsuarioEntrar.Text;
+            string senha = txtSenhaEntrar.Text;
 
-            if (IsLogin(user, pass))
+            if (IsLogin(nome, senha))
             {
-                MessageBox.Show($"Bem vindo {user}!");
+                MessageBox.Show($"Bem vindo {nome}!");
                 Home HomeForm = new Home();
                 HomeForm.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show($"Usuário {user} não existe ou senha incorreta");
+                MessageBox.Show($"Usuário não existe ou senha incorreta");
             }
         }
 
-        public bool IsLogin(string user, string pass)
+        public bool IsLogin(string nome, string senha)
         {
-            string query = $"SELECT * FROM users WHERE username='{user}' AND password='{pass}';";
+            string query = $"SELECT * FROM logincadastro WHERE nome='{nome}' AND senha='{senha}';";
 
             try
             {

@@ -7,24 +7,10 @@ namespace ProjetoProgramacaoVisual
     public partial class Registrar : Form
     {
         private MySqlConnection conn;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-        private string ssl;
-
         public Registrar()
-        {
-            server = "localhost";
-            uid = "root";
-            password = "";
-            database = "tut";
-            ssl = "None";
-
-
+        { 
             string connString;
-            connString = $"datasource={server};username={uid};password={password};database={database};SSL Mode={ssl};";
-
+            connString = $"datasource=localhost;username=root;password=;database=projetovisual;SSL Mode=None;";
             conn = new MySqlConnection(connString);
 
             InitializeComponent();
@@ -32,24 +18,34 @@ namespace ProjetoProgramacaoVisual
 
         private void btnRegistrarSe_Click(object sender, EventArgs e)
         {
-            string user = txtNomeUsuario.Text;
-            string pass = txtSenha.Text;
+            string nome = txtNomeUsuario.Text;
+            string email = txtEmail.Text;
+            string telefone = txtTelefone.Text;
+            string senha = txtSenha.Text;
+            string confirmarSenha = txtConfSenha.Text;
 
-
-            if (RegisterFunc(user, pass))
+            if(confirmarSenha == senha)
             {
-                this.Close();
-                MessageBox.Show($"Usuário {user} cadastrado");
+                if (RegisterFunc(nome, email, telefone, senha))
+                {
+                    this.Close();
+                    MessageBox.Show($"Usuário {nome} cadastrado");
+                }
+                else
+                {
+                    MessageBox.Show($"Usuário não cadastrado");
+                }
             }
             else
             {
-                MessageBox.Show($"Usuário não cadastrado");
+                MessageBox.Show($"Confirmar senha e senha diferentes");
             }
+
         }
 
-        public bool RegisterFunc(string user, string pass)
+        public bool RegisterFunc(string nome, string email, string telefone, string senha)
         {
-            string query = $"INSERT INTO users(id,username,password) VALUES('','{user}','{pass}');";
+            string query = $"INSERT INTO logincadastro(id,nome,email,telefone,senha) VALUES('','{nome}','{email}','{telefone}','{senha}');";
 
             try
             {
