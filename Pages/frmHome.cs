@@ -11,35 +11,22 @@ namespace ProjetoProgramacaoVisual
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login frm = new Login();
-            frm.Show();
-        }
-
         private void btnCadastrarProd_Click(object sender, EventArgs e)
         {
             frmProdutos frm = new frmProdutos();
             frm.Show();
         }
 
-        private void btnCadastrarCateg_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
-            frmCategorias frm = new frmCategorias();
-            frm.Show();
+            this.Close();
         }
 
-        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            frmProdutos frm = new frmProdutos();
-            frm.Show();
-        }
-
-        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCategorias frm = new frmCategorias();
-            frm.Show();
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

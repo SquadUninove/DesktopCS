@@ -51,7 +51,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 75);
+            this.label1.Location = new System.Drawing.Point(58, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(448, 75);
+            this.label2.Location = new System.Drawing.Point(64, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 1;
@@ -68,23 +68,23 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(116, 72);
+            this.txtNome.Location = new System.Drawing.Point(116, 102);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(100, 22);
             this.txtNome.TabIndex = 3;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(500, 72);
+            this.txtValor.Location = new System.Drawing.Point(116, 177);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(100, 22);
             this.txtValor.TabIndex = 4;
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(260, 131);
+            this.btnInserir.Location = new System.Drawing.Point(606, 143);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(75, 23);
+            this.btnInserir.Size = new System.Drawing.Size(246, 56);
             this.btnInserir.TabIndex = 6;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // btnExibir
             // 
-            this.btnExibir.Location = new System.Drawing.Point(289, 248);
+            this.btnExibir.Location = new System.Drawing.Point(606, 430);
             this.btnExibir.Name = "btnExibir";
             this.btnExibir.Size = new System.Drawing.Size(246, 47);
             this.btnExibir.TabIndex = 7;
@@ -102,9 +102,9 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(473, 131);
+            this.btnExcluir.Location = new System.Drawing.Point(606, 294);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(246, 54);
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(367, 131);
+            this.btnAlterar.Location = new System.Drawing.Point(606, 216);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(246, 55);
             this.btnAlterar.TabIndex = 9;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -127,12 +127,12 @@ namespace ProjetoProgramacaoVisual.Pages
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(177, 190);
             this.dataGridView1.TabIndex = 10;
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(319, 72);
+            this.txtDescricao.Location = new System.Drawing.Point(138, 143);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(100, 22);
             this.txtDescricao.TabIndex = 12;
@@ -140,7 +140,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 75);
+            this.label3.Location = new System.Drawing.Point(61, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 11;
@@ -148,7 +148,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.Location = new System.Drawing.Point(707, 72);
+            this.txtQuantidade.Location = new System.Drawing.Point(152, 216);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(100, 22);
             this.txtQuantidade.TabIndex = 14;
@@ -156,7 +156,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(619, 75);
+            this.label4.Location = new System.Drawing.Point(64, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 13;
@@ -164,7 +164,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(389, 12);
+            this.txtId.Location = new System.Drawing.Point(206, 62);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 22);
             this.txtId.TabIndex = 16;
@@ -172,7 +172,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(244, 15);
+            this.label5.Location = new System.Drawing.Point(61, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 17);
             this.label5.TabIndex = 15;
@@ -180,9 +180,9 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(341, 184);
+            this.btnConsultar.Location = new System.Drawing.Point(606, 365);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(130, 23);
+            this.btnConsultar.Size = new System.Drawing.Size(246, 50);
             this.btnConsultar.TabIndex = 17;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;

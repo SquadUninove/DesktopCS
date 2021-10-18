@@ -25,9 +25,9 @@ namespace ProjetoProgramacaoVisual
             if (IsLogin(nome, senha))
             {
                 MessageBox.Show($"Bem vindo {nome}!");
+                this.Hide();
                 Home HomeForm = new Home();
                 HomeForm.Show();
-                this.Hide();
             }
             else
             {
@@ -96,6 +96,11 @@ namespace ProjetoProgramacaoVisual
                 }
                 return false;
             }    
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
