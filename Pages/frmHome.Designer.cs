@@ -29,67 +29,74 @@ namespace ProjetoProgramacaoVisual
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnComprar = new System.Windows.Forms.Button();
+            this.btnSobre = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnCadastrarProd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button3
+            // btnComprar
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::ProjetoProgramacaoVisual.Properties.Resources.adicionar__1_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(29, 292);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(264, 207);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cadastrar Produtos";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnComprar.BackColor = System.Drawing.Color.Transparent;
+            this.btnComprar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnComprar.FlatAppearance.BorderSize = 0;
+            this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComprar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.carrinho_carrinho;
+            this.btnComprar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnComprar.Location = new System.Drawing.Point(29, 292);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(264, 207);
+            this.btnComprar.TabIndex = 3;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
-            // button2
+            // btnSobre
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::ProjetoProgramacaoVisual.Properties.Resources.adicionar__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(362, 292);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(264, 207);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Cadastrar Produtos";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSobre.BackColor = System.Drawing.Color.Transparent;
+            this.btnSobre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSobre.FlatAppearance.BorderSize = 0;
+            this.btnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSobre.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSobre.Image = global::ProjetoProgramacaoVisual.Properties.Resources.sobre;
+            this.btnSobre.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSobre.Location = new System.Drawing.Point(362, 292);
+            this.btnSobre.Name = "btnSobre";
+            this.btnSobre.Size = new System.Drawing.Size(264, 207);
+            this.btnSobre.TabIndex = 4;
+            this.btnSobre.Text = "Sobre";
+            this.btnSobre.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSobre.UseVisualStyleBackColor = false;
+            this.btnSobre.Click += new System.EventHandler(this.btnSobre_Click);
             // 
-            // button1
+            // btnClientes
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ProjetoProgramacaoVisual.Properties.Resources.adicionar__1_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(362, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(264, 207);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cadastrar Produtos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnClientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.Image = global::ProjetoProgramacaoVisual.Properties.Resources.lista_de_itens;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnClientes.Location = new System.Drawing.Point(362, 29);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(264, 207);
+            this.btnClientes.TabIndex = 2;
+            this.btnClientes.Text = "Cadastrar Categorias";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.Transparent;
             this.btnSair.BackgroundImage = global::ProjetoProgramacaoVisual.Properties.Resources.botao_x;
             this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -105,6 +112,7 @@ namespace ProjetoProgramacaoVisual
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.BackgroundImage = global::ProjetoProgramacaoVisual.Properties.Resources.sair;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -118,6 +126,7 @@ namespace ProjetoProgramacaoVisual
             // btnCadastrarProd
             // 
             this.btnCadastrarProd.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrarProd.FlatAppearance.BorderSize = 0;
             this.btnCadastrarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarProd.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,9 +146,9 @@ namespace ProjetoProgramacaoVisual
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 553);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnComprar);
+            this.Controls.Add(this.btnSobre);
+            this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnCadastrarProd);
@@ -155,8 +164,8 @@ namespace ProjetoProgramacaoVisual
         private System.Windows.Forms.Button btnCadastrarProd;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnSobre;
+        private System.Windows.Forms.Button btnComprar;
     }
 }

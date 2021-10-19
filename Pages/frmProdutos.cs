@@ -104,5 +104,10 @@ namespace ProjetoProgramacaoVisual.Pages
             comando.Dispose();
             conexao.Close();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

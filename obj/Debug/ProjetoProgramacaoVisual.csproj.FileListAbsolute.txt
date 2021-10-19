@@ -37,3 +37,6 @@ C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\System.Buffers.xml
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\System.Memory.xml
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Pages.frmSobre.resources
+C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Pages.frmComprar.resources
+C:\Users\Gustavo\Desktop\ProjetoProgramacaoVisual\obj\Debug\ProjetoProgramacaoVisual.Pages.frmCategorias.resources

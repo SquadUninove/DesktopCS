@@ -28,5 +28,26 @@ namespace ProjetoProgramacaoVisual
             login.Show();
             this.Close();
         }
+
+        private void btnSobre_Click(object sender, EventArgs e)
+        {
+            frmSobre sobre = new frmSobre();
+            sobre.Show();
+            this.Close();
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            frmComprar comprar = new frmComprar();
+            comprar.Show();
+            this.Close();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            frmCategorias clientes = new frmCategorias();
+            clientes.Show();
+            this.Close();
+        }
     }
 }

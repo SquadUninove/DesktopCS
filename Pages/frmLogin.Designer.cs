@@ -34,8 +34,8 @@ namespace ProjetoProgramacaoVisual
             this.label2 = new System.Windows.Forms.Label();
             this.txtNomeUsuarioEntrar = new System.Windows.Forms.TextBox();
             this.txtSenhaEntrar = new System.Windows.Forms.TextBox();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -60,15 +60,6 @@ namespace ProjetoProgramacaoVisual
             this.txtSenhaEntrar.Name = "txtSenhaEntrar";
             this.txtSenhaEntrar.UseSystemPasswordChar = true;
             // 
-            // btnRegister
-            // 
-            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnRegister, "btnRegister");
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -79,6 +70,16 @@ namespace ProjetoProgramacaoVisual
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnRegister, "btnRegister");
+            this.btnRegister.Image = global::ProjetoProgramacaoVisual.Properties.Resources.adicionar_usuario__1_;
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnLogin
             // 
