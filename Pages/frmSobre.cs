@@ -19,8 +19,6 @@ namespace ProjetoProgramacaoVisual.Pages
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
             this.Close();
         }
     }

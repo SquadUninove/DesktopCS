@@ -78,6 +78,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(369, 38);
             this.txtNome.TabIndex = 3;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtValor
             // 
@@ -214,6 +215,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // btnInserir
             // 
             this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInserir.Enabled = false;
             this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = global::ProjetoProgramacaoVisual.Properties.Resources.salve_;
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,7 +239,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnSair.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSair.Location = new System.Drawing.Point(781, 12);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(71, 72);
+            this.btnSair.Size = new System.Drawing.Size(71, 69);
             this.btnSair.TabIndex = 18;
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);

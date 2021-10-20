@@ -13,8 +13,10 @@ namespace ProjetoProgramacaoVisual
 
         private void btnCadastrarProd_Click(object sender, EventArgs e)
         {
-            frmProdutos frm = new frmProdutos();
-            frm.Show();
+            this.Hide();
+            var Produtos = new frmProdutos();
+            Produtos.Closed += (s, args) => this.Show();
+            Produtos.Show();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -24,30 +26,34 @@ namespace ProjetoProgramacaoVisual
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            this.Close();
+            this.Hide();
+            var Login = new Login();
+            Login.Closed += (s, args) => this.Close();
+            Login.Show();
         }
 
         private void btnSobre_Click(object sender, EventArgs e)
         {
-            frmSobre sobre = new frmSobre();
-            sobre.Show();
-            this.Close();
+            this.Hide();
+            var Sobre = new frmSobre();
+            Sobre.Closed += (s, args) => this.Show();
+            Sobre.Show();
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            frmComprar comprar = new frmComprar();
-            comprar.Show();
-            this.Close();
+            this.Hide();
+            var Comprar = new frmComprar();
+            Comprar.Closed += (s, args) => this.Show();
+            Comprar.Show();
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            frmCategorias clientes = new frmCategorias();
-            clientes.Show();
-            this.Close();
+            this.Hide();
+            var Categorias = new frmCategorias();
+            Categorias.Closed += (s, args) => this.Show();
+            Categorias.Show();
         }
     }
 }

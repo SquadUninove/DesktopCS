@@ -26,8 +26,9 @@ namespace ProjetoProgramacaoVisual
             {
                 MessageBox.Show($"Bem vindo {nome}!");
                 this.Hide();
-                Home HomeForm = new Home();
-                HomeForm.Show();
+                var Home = new Home();
+                Home.Closed += (s, args) => this.Close();
+                Home.Show();
             }
             else
             {
@@ -73,8 +74,10 @@ namespace ProjetoProgramacaoVisual
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Registrar RegisterForm = new Registrar();
-            RegisterForm.Show();
+            this.Hide();
+            var Registrar = new Registrar();
+            Registrar.Closed += (s, args) => this.Show();
+            Registrar.Show();
         }
 
         private bool OpenConnection()
