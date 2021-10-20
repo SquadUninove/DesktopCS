@@ -141,6 +141,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(136, 38);
             this.txtId.TabIndex = 16;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label5
             // 
@@ -155,6 +156,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // btnConsultar
             // 
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.Enabled = false;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.lupa;
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,6 +172,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // btnAlterar
             // 
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.alterar;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,6 +188,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // btnExcluir
             // 
             this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::ProjetoProgramacaoVisual.Properties.Resources.excluir;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

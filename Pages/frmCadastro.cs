@@ -24,23 +24,29 @@ namespace ProjetoProgramacaoVisual
             string senha = txtSenha.Text;
             string confirmarSenha = txtConfSenha.Text;
 
-            if(confirmarSenha == senha)
+            if (txtNomeUsuario.Text == "" || txtEmail.Text == "" || txtTelefone.Text == "" || txtSenha.Text == "" || txtConfSenha.Text == "")
             {
-                if (RegisterFunc(nome, email, telefone, senha))
-                {
-                    this.Close();
-                    MessageBox.Show($"Usuário {nome} cadastrado");
-                }
-                else
-                {
-                    MessageBox.Show($"Usuário não cadastrado");
-                }
+                MessageBox.Show("Preencha todos os campos para realizar o cadastro");
             }
             else
             {
-                MessageBox.Show($"Confirmar senha e senha diferentes");
+                if (confirmarSenha == senha)
+                {
+                    if (RegisterFunc(nome, email, telefone, senha))
+                    {
+                        this.Close();
+                        MessageBox.Show($"Usuário {nome} cadastrado");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Usuário não cadastrado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Confirmar senha e senha diferentes");
+                }
             }
-
         }
 
         public bool RegisterFunc(string nome, string email, string telefone, string senha)
@@ -100,6 +106,18 @@ namespace ProjetoProgramacaoVisual
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbxChecar_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbxChecar.Checked == true)
+            {
+                btnRegistrarSe.Enabled = true;
+            }
+            if(cbxChecar.Checked == false)
+            {
+                btnRegistrarSe.Enabled = false;
+            }
         }
     }
 }

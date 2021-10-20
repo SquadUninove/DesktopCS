@@ -39,7 +39,6 @@ namespace ProjetoProgramacaoVisual.Pages
 
         private void btnInserir_Click(object sender, EventArgs e)
         {
-                btnInserir.Enabled = true;
                 MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSL Mode=none;");
                 string comandoSQL = "INSERT INTO produtos (nome,descricao,valor,quantidade) VALUES ('" + txtNome.Text + "','" + txtDescricao.Text + "','" + txtValor.Text + "','" + txtQuantidade.Text + "')";
                 MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
@@ -120,6 +119,22 @@ namespace ProjetoProgramacaoVisual.Pages
             else
             {
                 btnInserir.Enabled = true;
+            }
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                btnConsultar.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
+            }
+            else
+            {
+                btnConsultar.Enabled = true;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
             }
         }
     }

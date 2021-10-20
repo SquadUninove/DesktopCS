@@ -6,12 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace ProjetoProgramacaoVisual.Pages
 {
     public partial class frmCategorias : Form
     {
+        MySqlDataReader dr;
+        MySqlDataAdapter da;
+        
         public frmCategorias()
         {
             InitializeComponent();
@@ -20,6 +24,118 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSL Mode=none;");
+            string comandoSQL = "INSERT INTO produtos (nome,descricao,valor,quantidade) VALUES ('" + txtNome.Text + "','" + txtDescricao.Text + "')";
+            MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
+
+            conexao.Open();
+            comando.ExecuteNonQuery();
+
+            MessageBox.Show("DADOS SALVOS");
+
+            comando.Dispose();
+            conexao.Close();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
+            string comandoSQL = "UPDATE produtos SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "',valor='";
+            MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
+
+            conexao.Open();
+            comando.ExecuteNonQuery();
+
+            MessageBox.Show("DADOS ATUALIZADOS");
+
+            comando.Dispose();
+            conexao.Close();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
+            string comandoSQL = "DELETE FROM produtos WHERE id='" + txtId.Text + "'";
+            MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
+
+            conexao.Open();
+            comando.ExecuteNonQuery();
+
+            MessageBox.Show("DADOS DELETADOS");
+
+            comando.Dispose();
+            conexao.Close();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
+            string comandoSQL = "SELECT * FROM produtos WHERE id='" + txtId.Text + "'";
+            MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
+
+            conexao.Open();
+            dr = comando.ExecuteReader();
+
+            while (dr.Read())
+            {
+                txtNome.Text = Convert.ToString(dr["nome"]);
+                txtDescricao.Text = Convert.ToString(dr["descricao"]);
+            }
+
+            MessageBox.Show("DADOS SELECIONADOS");
+
+            comando.Dispose();
+            conexao.Close();
+        }
+
+        private void btnExibir_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
+            string comandoSQL = "SELECT id,nome,descricao,valor,quantidade FROM produtos";
+
+            da = new MySqlDataAdapter(comandoSQL, conexao);
+
+            DataTable dataTable = new DataTable();
+
+            da.Fill(dataTable);
+
+            dataGridView1.DataSource = dataTable;
+
+            MessageBox.Show("DADOS SELECIONADOS");
+
+            conexao.Close();
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                btnConsultar.Enabled = false;
+                btnAlterar.Enabled = false;
+                btnExcluir.Enabled = false;
+            }
+            else
+            {
+                btnConsultar.Enabled = true;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text == "")
+            {
+                btnInserir.Enabled = false;
+            }
+            else
+            {
+                btnInserir.Enabled = true;
+            }
         }
     }
 }

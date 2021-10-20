@@ -147,6 +147,7 @@ namespace ProjetoProgramacaoVisual
             this.cbxChecar.TabIndex = 10;
             this.cbxChecar.Text = "Checar informações";
             this.cbxChecar.UseVisualStyleBackColor = true;
+            this.cbxChecar.CheckedChanged += new System.EventHandler(this.cbxChecar_CheckedChanged);
             // 
             // button1
             // 
@@ -167,6 +168,7 @@ namespace ProjetoProgramacaoVisual
             // btnRegistrarSe
             // 
             this.btnRegistrarSe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarSe.Enabled = false;
             this.btnRegistrarSe.FlatAppearance.BorderSize = 0;
             this.btnRegistrarSe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarSe.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

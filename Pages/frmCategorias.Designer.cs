@@ -64,6 +64,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // btnConsultar
             // 
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.Enabled = false;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.lupa;
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,10 +75,12 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.alterar;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,10 +91,12 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::ProjetoProgramacaoVisual.Properties.Resources.excluir;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,6 +107,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnExibir
             // 
@@ -116,10 +122,12 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnExibir.Text = "Exibir";
             this.btnExibir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // btnInserir
             // 
             this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInserir.Enabled = false;
             this.btnInserir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = global::ProjetoProgramacaoVisual.Properties.Resources.salve_;
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,6 +138,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnInserir.Text = "Inserir";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // dataGridView1
             // 
@@ -148,6 +157,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(136, 38);
             this.txtId.TabIndex = 27;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label5
             // 
@@ -184,6 +194,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(369, 38);
             this.txtNome.TabIndex = 29;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label1
             // 

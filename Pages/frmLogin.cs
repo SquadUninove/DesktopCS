@@ -22,18 +22,26 @@ namespace ProjetoProgramacaoVisual
             string nome = txtNomeUsuarioEntrar.Text;
             string senha = txtSenhaEntrar.Text;
 
-            if (IsLogin(nome, senha))
+            if(txtNomeUsuarioEntrar.Text == "" || txtSenhaEntrar.Text == "")
             {
-                MessageBox.Show($"Bem vindo {nome}!");
-                this.Hide();
-                var Home = new Home();
-                Home.Closed += (s, args) => this.Close();
-                Home.Show();
+                MessageBox.Show("Usuário ou senha não digitados");
             }
             else
             {
-                MessageBox.Show($"Usuário não existe ou senha incorreta");
+                if (IsLogin(nome, senha))
+                {
+                    MessageBox.Show($"Bem vindo {nome}!");
+                    this.Hide();
+                    var Home = new Home();
+                    Home.Closed += (s, args) => this.Close();
+                    Home.Show();
+                }
+                else
+                {
+                    MessageBox.Show($"Usuário não existe ou senha incorreta");
+                }
             }
+
         }
 
         public bool IsLogin(string nome, string senha)
