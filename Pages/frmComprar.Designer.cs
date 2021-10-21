@@ -35,14 +35,15 @@ namespace ProjetoProgramacaoVisual.Pages
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnProcurar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.btnProcurar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnExibir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,7 +72,6 @@ namespace ProjetoProgramacaoVisual.Pages
             this.rdbCartao.Name = "rdbCartao";
             this.rdbCartao.Size = new System.Drawing.Size(82, 27);
             this.rdbCartao.TabIndex = 23;
-            this.rdbCartao.TabStop = true;
             this.rdbCartao.Text = "Cartão";
             this.rdbCartao.UseVisualStyleBackColor = true;
             // 
@@ -84,7 +84,6 @@ namespace ProjetoProgramacaoVisual.Pages
             this.rdbDinheiro.Name = "rdbDinheiro";
             this.rdbDinheiro.Size = new System.Drawing.Size(96, 27);
             this.rdbDinheiro.TabIndex = 22;
-            this.rdbDinheiro.TabStop = true;
             this.rdbDinheiro.Text = "Dinheiro";
             this.rdbDinheiro.UseVisualStyleBackColor = true;
             // 
@@ -121,6 +120,21 @@ namespace ProjetoProgramacaoVisual.Pages
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(175, 30);
             this.txtId.TabIndex = 25;
+            // 
+            // btnProcurar
+            // 
+            this.btnProcurar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcurar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.lupa;
+            this.btnProcurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProcurar.Location = new System.Drawing.Point(632, 17);
+            this.btnProcurar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProcurar.Name = "btnProcurar";
+            this.btnProcurar.Size = new System.Drawing.Size(163, 93);
+            this.btnProcurar.TabIndex = 24;
+            this.btnProcurar.Text = "Procurar";
+            this.btnProcurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // dataGridView1
             // 
@@ -176,6 +190,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnComprar
             // 
@@ -190,20 +205,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnComprar.Text = "Comprar";
             this.btnComprar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnComprar.UseVisualStyleBackColor = true;
-            // 
-            // btnProcurar
-            // 
-            this.btnProcurar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.lupa;
-            this.btnProcurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcurar.Location = new System.Drawing.Point(632, 17);
-            this.btnProcurar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnProcurar.Name = "btnProcurar";
-            this.btnProcurar.Size = new System.Drawing.Size(163, 93);
-            this.btnProcurar.TabIndex = 24;
-            this.btnProcurar.Text = "Procurar";
-            this.btnProcurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnSair
             // 
@@ -222,11 +224,27 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // btnExibir
+            // 
+            this.btnExibir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExibir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExibir.Image = global::ProjetoProgramacaoVisual.Properties.Resources.mao_mostrando_um_documento_em_papel;
+            this.btnExibir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExibir.Location = new System.Drawing.Point(41, 558);
+            this.btnExibir.Name = "btnExibir";
+            this.btnExibir.Size = new System.Drawing.Size(168, 83);
+            this.btnExibir.TabIndex = 30;
+            this.btnExibir.Text = "Exibir";
+            this.btnExibir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
+            // 
             // frmComprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 677);
+            this.Controls.Add(this.btnExibir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label2);
@@ -268,5 +286,6 @@ namespace ProjetoProgramacaoVisual.Pages
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnExibir;
     }
 }

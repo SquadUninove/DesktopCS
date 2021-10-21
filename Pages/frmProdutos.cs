@@ -22,7 +22,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnExibir_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "SELECT id,nome,descricao,valor,quantidade FROM produtos";
+            string comandoSQL = "SELECT * FROM produtos";
 
             da = new MySqlDataAdapter(comandoSQL, conexao);
 
@@ -40,7 +40,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnInserir_Click(object sender, EventArgs e)
         {
                 MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSL Mode=none;");
-                string comandoSQL = "INSERT INTO produtos (nome,descricao,valor,quantidade) VALUES ('" + txtNome.Text + "','" + txtDescricao.Text + "','" + txtValor.Text + "','" + txtQuantidade.Text + "')";
+                string comandoSQL = "INSERT INTO produtos (nome,descricao,valor,quantidade,categoria) VALUES ('" + txtNome.Text + "','" + txtDescricao.Text + "','" + txtValor.Text + "','" + txtQuantidade.Text + "','" + comboBox1.Text + "')";
                 MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
                 conexao.Open();
@@ -55,7 +55,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "UPDATE produtos SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "',valor='" + txtValor.Text + "',quantidade='" + txtQuantidade.Text + "' WHERE id='" + txtId.Text + "'";
+            string comandoSQL = "UPDATE produtos SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "',valor='" + txtValor.Text + "',quantidade='" + txtQuantidade.Text + "',categoria='" + comboBox1.Text + "' WHERE id='" + txtId.Text + "'";
             MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
             conexao.Open();
@@ -97,6 +97,7 @@ namespace ProjetoProgramacaoVisual.Pages
                 txtDescricao.Text = Convert.ToString(dr["descricao"]);
                 txtValor.Text = Convert.ToString(dr["valor"]);
                 txtQuantidade.Text = Convert.ToString(dr["quantidade"]);
+                comboBox1.Text = Convert.ToString(dr["categoria"]);
             }
 
             MessageBox.Show("DADOS SELECIONADOS");
@@ -136,6 +137,24 @@ namespace ProjetoProgramacaoVisual.Pages
                 btnAlterar.Enabled = true;
                 btnExcluir.Enabled = true;
             }
+        }
+
+        private void frmProdutos_Load(object sender, EventArgs e)
+        {
+            MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
+            string comandoSQL = "SELECT * FROM categorias";
+            MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
+
+            conexao.Open();
+            dr = comando.ExecuteReader();
+
+            while (dr.Read())
+            {
+                comboBox1.Items.Add(dr.GetString("nome"));
+            }
+
+            comando.Dispose();
+            conexao.Close();
         }
     }
 }

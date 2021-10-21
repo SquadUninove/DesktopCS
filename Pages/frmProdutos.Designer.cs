@@ -296,6 +296,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.Name = "frmProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produtos";
+            this.Load += new System.EventHandler(this.frmProdutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

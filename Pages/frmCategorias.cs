@@ -29,7 +29,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnInserir_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSL Mode=none;");
-            string comandoSQL = "INSERT INTO produtos (nome,descricao,valor,quantidade) VALUES ('" + txtNome.Text + "','" + txtDescricao.Text + "')";
+            string comandoSQL = "INSERT INTO categorias (nome,descricao) VALUES ('" + txtNome.Text + "','" + txtDescricao.Text + "')";
             MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
             conexao.Open();
@@ -44,7 +44,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "UPDATE produtos SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "',valor='";
+            string comandoSQL = "UPDATE categorias SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "'";
             MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
             conexao.Open();
@@ -59,7 +59,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "DELETE FROM produtos WHERE id='" + txtId.Text + "'";
+            string comandoSQL = "DELETE FROM categorias WHERE id='" + txtId.Text + "'";
             MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
             conexao.Open();
@@ -74,7 +74,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "SELECT * FROM produtos WHERE id='" + txtId.Text + "'";
+            string comandoSQL = "SELECT * FROM categorias WHERE id='" + txtId.Text + "'";
             MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
             conexao.Open();
@@ -95,7 +95,7 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnExibir_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "SELECT id,nome,descricao,valor,quantidade FROM produtos";
+            string comandoSQL = "SELECT id,nome,descricao FROM categorias";
 
             da = new MySqlDataAdapter(comandoSQL, conexao);
 
