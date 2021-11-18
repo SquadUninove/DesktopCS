@@ -54,11 +54,11 @@ namespace ProjetoProgramacaoVisual.Pages
             this.groupBox1.Controls.Add(this.rdbCartao);
             this.groupBox1.Controls.Add(this.rdbDinheiro);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(321, 492);
+            this.groupBox1.Location = new System.Drawing.Point(422, 492);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(258, 149);
+            this.groupBox1.Size = new System.Drawing.Size(208, 149);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Forma de Pagamento";
@@ -74,6 +74,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.rdbCartao.TabIndex = 23;
             this.rdbCartao.Text = "Cartão";
             this.rdbCartao.UseVisualStyleBackColor = true;
+            this.rdbCartao.CheckedChanged += new System.EventHandler(this.rdbCartao_CheckedChanged);
             // 
             // rdbDinheiro
             // 
@@ -86,6 +87,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.rdbDinheiro.TabIndex = 22;
             this.rdbDinheiro.Text = "Dinheiro";
             this.rdbDinheiro.UseVisualStyleBackColor = true;
+            this.rdbDinheiro.CheckedChanged += new System.EventHandler(this.rdbDinheiro_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -120,9 +122,11 @@ namespace ProjetoProgramacaoVisual.Pages
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(175, 30);
             this.txtId.TabIndex = 25;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // btnProcurar
             // 
+            this.btnProcurar.Enabled = false;
             this.btnProcurar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcurar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.lupa;
             this.btnProcurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +155,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 517);
+            this.label2.Location = new System.Drawing.Point(33, 503);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 32);
             this.label2.TabIndex = 27;
@@ -161,7 +165,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(219, 517);
+            this.lblTotal.Location = new System.Drawing.Point(217, 503);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(59, 32);
             this.lblTotal.TabIndex = 28;
@@ -194,6 +198,7 @@ namespace ProjetoProgramacaoVisual.Pages
             // 
             // btnComprar
             // 
+            this.btnComprar.Enabled = false;
             this.btnComprar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComprar.Image = global::ProjetoProgramacaoVisual.Properties.Resources.carrinho_carrinho__1_;
             this.btnComprar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +235,7 @@ namespace ProjetoProgramacaoVisual.Pages
             this.btnExibir.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibir.Image = global::ProjetoProgramacaoVisual.Properties.Resources.mao_mostrando_um_documento_em_papel;
             this.btnExibir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExibir.Location = new System.Drawing.Point(41, 558);
+            this.btnExibir.Location = new System.Drawing.Point(43, 544);
             this.btnExibir.Name = "btnExibir";
             this.btnExibir.Size = new System.Drawing.Size(168, 83);
             this.btnExibir.TabIndex = 30;

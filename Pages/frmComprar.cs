@@ -87,11 +87,33 @@ namespace ProjetoProgramacaoVisual.Pages
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Compra cancelada");
-            lblTotal.Text = "";
+            lblTotal.Text = "0,00";
             txtId.Text = "";
             dataGridView1.DataSource = "";
             rdbCartao.Checked = false;
             rdbDinheiro.Checked = false;
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+            if (txtId.Text == "")
+            {
+                btnProcurar.Enabled = false;
+            }
+            else
+            {
+                btnProcurar.Enabled = true;
+            }
+        }
+
+        private void rdbDinheiro_CheckedChanged(object sender, EventArgs e)
+        {
+            btnComprar.Enabled = true;
+        }
+
+        private void rdbCartao_CheckedChanged(object sender, EventArgs e)
+        {
+            btnComprar.Enabled = true;
         }
     }
 }

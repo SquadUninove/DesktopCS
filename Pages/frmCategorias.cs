@@ -39,12 +39,15 @@ namespace ProjetoProgramacaoVisual.Pages
 
             comando.Dispose();
             conexao.Close();
+            txtNome.Text = "";
+            txtDescricao.Text = "";
+            dataGridView1.DataSource = "";
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd='';database=projetovisual;SSLMode=none;");
-            string comandoSQL = "UPDATE categorias SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "'";
+            string comandoSQL = "UPDATE categorias SET nome='" + txtNome.Text + "',descricao='" + txtDescricao.Text + "' WHERE id='" + txtId.Text + "'";
             MySqlCommand comando = new MySqlCommand(comandoSQL, conexao);
 
             conexao.Open();
@@ -54,6 +57,10 @@ namespace ProjetoProgramacaoVisual.Pages
 
             comando.Dispose();
             conexao.Close();
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtDescricao.Text = "";
+            dataGridView1.DataSource = "";
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -69,6 +76,10 @@ namespace ProjetoProgramacaoVisual.Pages
 
             comando.Dispose();
             conexao.Close();
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtDescricao.Text = "";
+            dataGridView1.DataSource = "";
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

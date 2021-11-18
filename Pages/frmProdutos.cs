@@ -50,6 +50,14 @@ namespace ProjetoProgramacaoVisual.Pages
 
                 comando.Dispose();
                 conexao.Close();
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtQuantidade.Text = "";
+            txtValor.Text = "";
+            txtDescricao.Text = "";
+            comboBox1.Text = "";
+            dataGridView1.DataSource = "";
+
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -65,6 +73,13 @@ namespace ProjetoProgramacaoVisual.Pages
 
             comando.Dispose();
             conexao.Close();
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtQuantidade.Text = "";
+            txtValor.Text = "";
+            txtDescricao.Text = "";
+            comboBox1.Text = "";
+            dataGridView1.DataSource = "";
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -80,6 +95,13 @@ namespace ProjetoProgramacaoVisual.Pages
 
             comando.Dispose();
             conexao.Close();
+            txtId.Text = "";
+            txtNome.Text = "";
+            txtQuantidade.Text = "";
+            txtValor.Text = "";
+            txtDescricao.Text = "";
+            comboBox1.Text = "";
+            dataGridView1.DataSource = "";
         }
 
         private void btnConsultar_Click_1(object sender, EventArgs e)
